@@ -1,23 +1,108 @@
 <!DOCTYPE html>
 <html lang="">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Totara Banner Creator</title>
-  <style>
-    body {
-      padding: 0;
-      margin: 0;
-    }
-  </style>
-  <script src="lib/p5.min.js"></script>
-  <script src="sketch.js"></script>
-</head>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <title>Totara Banner Creator</title>
+        <style></style>
+        <script src="lib/p5.min.js"></script>
+        <script src="sketch.js"></script>
 
-<body>
-  <main>
-  </main>
-</body>
+    </head>
+
+    <body class="has-navbar-fixed-top">
+        <main>
+
+            <nav class="navbar is-warning navbar is-fixed-top">
+                <div class="navbar-start">
+                    <div class="navbar-item">
+                        <h1>Totara Banner Creator</h1>
+                    </div>
+                </div>
+
+                <div
+                    class="navbar-end"><!-- navbar items -->
+                </div>
+            </nav>
+
+            <div class="section">
+                <div class="container">
+                    <div class="panel is-dark">
+
+                        <p class="panel-heading">
+                            Banner Creator
+                        </p>
+
+                        <div class="panel-block">
+                          <label class="label">Preview</label>
+                        </div>
+
+                        <div class="panel-block">
+                            <div id="canvasforp5"></div>
+                        </div>
+
+
+                        <div class="panel-block">
+
+                            <div class="field">
+                                <label class="label">Select Service</label>
+                                <div class="control">
+                                    <button class="button is-warning" id="nzdf-button">NZDF</button>
+                                    <button class="button is-link" id="navy-button">Navy</button>
+                                    <button class="button is-danger" id="army-button">Army</button>
+                                    <button class="button is-info" id="air-button">Air</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel-block">
+
+                            <div class="field">
+                                <label class="label">Enter Course Code</label>
+                                <div class="control">
+                                    <input class="input" type="text" placeholder="Course Code" id="inputCode">
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="panel-block">
+
+                            <div class="field">
+                                <label class="label">Enter Course Name</label>
+                                <div class="control">
+                                    <input class="input" type="text" placeholder="Course Name" id="inputName">
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="panel-block">
+
+                            <div class="field">
+                                <div class="control py-1">
+                                    <button class="button is-link is-medium" id="saveButton">Save Image</button>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </main>
+
+
+    </body>
 
 </html>
