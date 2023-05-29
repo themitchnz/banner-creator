@@ -14,7 +14,8 @@ function setup() {
     current_banner = nzdf_banner;
     current_color = color('#ffe500');
 
-    var canvas = createCanvas(1080,122).parent('canvasforp5');
+    var canvasW = document.getElementById('canvasContainer').offsetWidth - 25;
+    var canvas = createCanvas(canvasW,122).parent('canvasforp5');
     banner_buffer = createGraphics(1635,204).textFont(font).textSize(fontsize);
 
     //setup colour buttons
@@ -36,7 +37,7 @@ function createBanner () {
     banner_buffer.fill(current_color).text(select('#inputCode').value(),205,152);
     banner_buffer.fill('white').text(select('#inputName').value(),205,182);
 
-    image(banner_buffer, 0, 0, width, height, 0, 0, 1635, 204);
+    image(banner_buffer, 0, 0, 1635, 204, 0, 0, 1635, 204);
 }
 
 function saveImage () {
