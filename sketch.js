@@ -15,7 +15,7 @@ function setup() {
     current_color = color('#ffe500');
 
     var canvasW = document.getElementById('canvasContainer').offsetWidth - 25;
-    var canvas = createCanvas(canvasW,122).parent('canvasforp5');
+    var canvas = createCanvas(canvasW,204).parent('canvasforp5');
     banner_buffer = createGraphics(1635,204).textFont(font).textSize(fontsize);
 
     //setup colour buttons
