@@ -18,6 +18,29 @@ function setup() {
     var canvas = createCanvas(canvasW,204).parent('canvasforp5');
     banner_buffer = createGraphics(1635,204).textFont(font).textSize(fontsize);
 
+        //check for URL params and update fields if there
+    const queries = window.location.search;
+    const urlParams = new URLSearchParams(queries);
+    const param_course = urlParams.get('course'); //contains whole string ie N12345  Blah Blah
+
+    if (urlParams.has('course')) {
+
+        const param_service = param_course[0]; //get first character ie D,N,A,F
+        const param_id = param_course.split(" ")[0]; //gets course id (splits str by spaces and returns the first)
+        const param_name = param_course.substring(param_course.indexOf(" ")).trimStart(); //return everything after the first space ie the course name
+
+        switch(param_service) {
+            case "D": current_banner = nzdf_banner; current_color = color('#ffe500'); break;
+            case "N": current_banner = navy_banner; current_color = color('#0099d8'); break;
+            case "A": current_banner = army_banner; current_color = color('#c62026'); break;
+            case "F": current_banner = air_banner; current_color = color('#28b6ea'); break;
+            default: current_banner = nzdf_banner; current_color = color('#ffe500'); break;
+        }
+
+        document.getElementById("inputCode").value = param_id;
+        document.getElementById("inputName").value = param_name;
+    }
+
     //setup colour buttons
     select('#nzdf-button').mousePressed(function() { current_banner = nzdf_banner; current_color = color('#ffe500'); createBanner()});
     select('#navy-button').mousePressed(function() { current_banner = navy_banner; current_color = color('#0099d8'); createBanner()});
