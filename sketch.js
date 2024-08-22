@@ -29,6 +29,11 @@ function setup() {
         const param_id = param_course.split(" ")[0]; //gets course id (splits str by spaces and returns the first)
         const param_name = param_course.substring(param_course.indexOf(" ")).trimStart(); //return everything after the first space ie the course name
 
+        //grab second letter if a LA. 
+        if(param_service == "L") {
+            param_service = param_course[1];
+        }
+
         switch(param_service) {
             case "D": current_banner = nzdf_banner; current_color = color('#ffe500'); break;
             case "N": current_banner = navy_banner; current_color = color('#0099d8'); break;
