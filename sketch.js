@@ -25,14 +25,11 @@ function setup() {
 
     if (urlParams.has('course')) {
 
-        const param_service = param_course[0]; //get first character ie D,N,A,F
+        var param_service = param_course[0]; //get first character ie D,N,A,F
+         if(param_service == "L") { param_service = param_course[1]; } //grab second letter if a LA. 
+        
         const param_id = param_course.split(" ")[0]; //gets course id (splits str by spaces and returns the first)
         const param_name = param_course.substring(param_course.indexOf(" ")).trimStart(); //return everything after the first space ie the course name
-
-        //grab second letter if a LA. 
-        if(param_service == "L") {
-            param_service = param_course[1];
-        }
 
         switch(param_service) {
             case "D": current_banner = nzdf_banner; current_color = color('#ffe500'); break;
