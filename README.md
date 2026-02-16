@@ -1,4 +1,4 @@
 # banner-creator
-Create banners for our LMS
+Create images for our LMS
 
-Banner images are copyrighted and cannot be used
+Images are copyrighted and cannot be used
