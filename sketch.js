@@ -66,6 +66,8 @@ function setup() {
     select('#inputCode').input(createImages);
     select('#inputName').input(createImages);
     select('#saveImages').mousePressed(saveImages);
+    select('#saveBanner').mousePressed(saveBanner);
+    select('#saveCover').mousePressed(saveCover);
 
     createImages();
 }
@@ -99,4 +101,5 @@ function saveBanner () {
 
 function saveCover () {
     save(cover_buffer,select('#inputCode').value() + '_cover' + '.png');
+
 }
