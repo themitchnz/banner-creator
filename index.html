@@ -1,108 +1,78 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
 
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-        <title>Totara Banner Creator</title>
+        <link rel="stylesheet" href="lib/bulma.min.css">
+        <link rel="stylesheet" href="lib/main.css">
+        <title>Totara Course Graphics Generator</title>
         <style></style>
         <script src="lib/p5.min.js"></script>
         <script src="sketch.js"></script>
-
     </head>
 
-    <body class="has-navbar-fixed-top">
+    <body class="">
         <main>
-
-            <nav class="navbar is-warning navbar is-fixed-top">
-                <div class="navbar-start">
-                    <div class="navbar-item">
-                        <h1>Totara Banner Creator</h1>
-                    </div>
+            <!-- Hero Banner across top -->
+            <section class="hero is-warning is-small has-text-centered">
+                <div class="hero-body">
+                    <p class="title">2026 Totara course graphics generator</p>
+                    <p class="subtitle">Everything you need to create required course template graphics</p>
                 </div>
-
-                <div
-                    class="navbar-end"><!-- navbar items -->
-                </div>
-            </nav>
+            </section>
 
             <div class="section">
                 <div class="container">
-                    <div class="panel is-dark">
+                    <div class="panel has-background-white">
+                        <p class="panel-heading">Preview only - Banner and cover images</p>
 
-                        <p class="panel-heading">
-                            Banner Creator
-                        </p>
-
-                        <div class="panel-block">
-                          <label class="label">Preview</label>
-                        </div>
-
+                        <!-- P5 Canvas goes here -->
                         <div class="panel-block" id='canvasContainer'>
                             <div id="canvasforp5"></div>
                         </div>
 
-
+                        <!-- Controls section -->
                         <div class="panel-block">
-
-                            <div class="field">
-                                <label class="label">Select Service</label>
+                            <div class="field is-grouped">
+                                <!-- Service colour buttons -->
                                 <div class="control">
+                                    <label class="label">Select service colour</label>
                                     <button class="button is-warning" id="nzdf-button">NZDF</button>
                                     <button class="button is-link" id="navy-button">Navy</button>
                                     <button class="button is-danger" id="army-button">Army</button>
                                     <button class="button is-info" id="air-button">Air</button>
                                 </div>
-                            </div>
-                        </div>
 
-                        <div class="panel-block">
-
-                            <div class="field">
-                                <label class="label">Enter Course Code</label>
+                                <!-- Course Code input -->
                                 <div class="control">
+                                    <label class="label">Enter Course Code</label>
                                     <input class="input" type="text" placeholder="Course Code" id="inputCode">
                                 </div>
-                            </div>
 
-
-                        </div>
-
-                        <div class="panel-block">
-
-                            <div class="field">
-                                <label class="label">Enter Course Name</label>
+                                <!-- Course name input -->
                                 <div class="control">
+                                    <label class="label">Enter Course Name</label>
                                     <input class="input" type="text" placeholder="Course Name" id="inputName">
                                 </div>
                             </div>
-
-
                         </div>
 
+                        <!-- Save button -->
                         <div class="panel-block">
-
                             <div class="field">
                                 <div class="control py-1">
-                                    <button class="button is-link is-medium" id="saveButton">Save Image</button>
+                                    <button class="button is-link is-medium" id="saveImages">Save all images</button>
+                                    <button class="button is-link is-medium" id="saveBanner">Save banner</button>
+                                    <button class="button is-link is-medium" id="saveCover">Save cover</button>
                                 </div>
                             </div>
-
-
                         </div>
 
-
                     </div>
-
-
                 </div>
             </div>
 
-
         </main>
-
-
     </body>
-
 </html>
