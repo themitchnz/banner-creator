@@ -1,0 +1,17 @@
+:root {
+  --bulma-link-h: 211deg;
+  --bulma-link-l: 25%;
+  --bulma-info-h: 196deg;
+  --bulma-info-s: 82%;
+  --bulma-info-l: 54%;
+  --bulma-warning-h: 54deg;
+  --bulma-warning-l: 50%;
+  --bulma-danger-h: 358deg;
+  --bulma-danger-s: 72%;
+  --bulma-danger-l: 45%;
+}
+
+body {
+  background-color: #fafafa;
+  min-height: 100vh;
+}
